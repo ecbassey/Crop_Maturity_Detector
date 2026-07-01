@@ -13,7 +13,7 @@ ________________________________________
 
 
 ## Full System Overview
-- **Quality Recommendation:** would give outputs like, Highest quality, Good quality, Diseased leaves etc.
+- **Quality Recommendation:** would give outputs like, Highest quality, Average quality, Diseased leaves etc.
 - **Dashboard:** Presents classification results, confidence scores, recommendations, and model performance
 - **Batch Image Processing** (if available)
 - **Model Comparison Module**
@@ -74,7 +74,8 @@ ____________________________________________
               ┌──────────────────────────┐
               │ Model Comparison Module  │
               │ Accuracy / Precision     │
-              │ Recall / F1-Score        │
+              │ Recall / F1-Score        |
+              | Confusion Matrix         |          
               └───────────┬──────────────┘
                           │
                           ▼
@@ -85,18 +86,18 @@ ____________________________________________
                           ▼
               ┌──────────────────────────┐
               │ Prediction Engine        │
-              │ HIghest Quality          │
-              │ Good Quality             │
+              │ Highest Quality          │
+              | Bad Quality              │
               │ Average Quality          │
-              │ Bad Quality              |
-              │ Diseased                 | 
+              │ Diseased                 |
+              │                          | 
               └───────────┬──────────────┘
                           │
                           ▼
               ┌──────────────────────────┐
               │ Recommendation           │
               │ • Highest Quality        │
-              │ • Good Quality           │
+              │ • Average Quality        │
               │ • Can't use              |
               │ • Diseased               | 
               └───────────┬──────────────┘
